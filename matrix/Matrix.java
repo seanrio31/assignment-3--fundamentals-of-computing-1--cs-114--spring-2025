@@ -12,8 +12,9 @@ public class Matrix {
     matrix[x2][y2] = temp;
   }
   public void printMatrix() {
+    int j;
     for (int i=0; i < matrix.length; i++) {
-      for (int j=0; j < matrix[i].length; j++){
+      for (j=0; j < matrix[i].length; j++){
         if (i +j == matrix.length - 1){
           System.out.print("\033[33m" + matrix[i][j] + "\033[0m" + " ");
         } else {
