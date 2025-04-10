@@ -39,31 +39,13 @@ public class Matrix {
     }
 
     public void flipMatrix() {
-        for (int i = 0; i < size; i++) {
-            for (int j = size - 1 - i; j > i; j--) {
-                swap(i, j, j, size - 1 - i);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the size of the matrix: ");
-        int size = scanner.nextInt();
-
-        Matrix matrix = new Matrix(size);
-
-        matrix.populateMatrix();
-
-        System.out.println("Original Matrix:");
-        matrix.printMatrix();
-
-        matrix.flipMatrix();
-
-        System.out.println("Flipped Matrix:");
-        matrix.printMatrix();
-
-        scanner.close();
-    }
+      int total = size * size;
+      for (int i = 0; i < total / 2; i++) {
+          int x1 = i / size;
+          int y1 = i % size;
+          int x2 = (total - 1 - i) / size;
+          int y2 = (total - 1 - i) % size;
+          swap(x1, y1, x2, y2);
+      }
   }
+ }
