@@ -12,28 +12,16 @@ public class Diamond {
       return;
     }
 
-    if (size % 2 == 0) {
-      size += 1;
-    }
-
     int mid = size / 2;
 
-    for (int i = 0; i <= mid; i++) {
-      for (int j = 0; j < mid - i; j++) {
+    for (int i = 0; i < size; i++) {
+      int spaces = Math.abs(mid - i);
+      int stars = size - 2 * spaces;
+
+      for (int j = 0; j < spaces; j++) {
         System.out.print(" ");
       }
-
-      for (int j = 0; j < 2 * i + 1; j++) {
-        System.out.print("*");
-      }
-      System.out.println();
-    }
-
-    for (int i = mid - 1; i >= 0; i--) {
-      for (int j = 0; j < mid - i; j++) {
-        System.out.print(" ");
-      }
-      for (int j = 0; j < 2 * i + 1; j++) {
+      for (int j = 0; j < stars; j++) {
         System.out.print("*");
       }
       System.out.println();
