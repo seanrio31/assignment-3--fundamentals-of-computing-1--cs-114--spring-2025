@@ -3,7 +3,7 @@ public class Matrix {
 
   public Matrix(int size) {
     matrix = new int [size][size];
-    System.out.println("Matrix dimensions: " + size + "x" = size);
+    System.out.println("Matrix dimensions: " + size + " = size");
   }
 
   private void swap(int x1, int y1, int x2, int y2){
